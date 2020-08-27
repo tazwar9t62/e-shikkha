@@ -5,8 +5,9 @@ const Cart = (props) => {
   console.log(cart);
   let total = cart.reduce((total, prd) => total + prd.price, 0);
   let coupon = total / 10;
-  let tax = (total - coupon) / 5;
-  let grandTotal = total - coupon + tax;
+  let totalBeforeTax = total - coupon;
+  let tax = totalBeforeTax / 20;
+  let grandTotal = totalBeforeTax + tax;
   function numFormat(num) {
     let precision = num.toFixed(2);
     return Number(precision);
@@ -15,9 +16,14 @@ const Cart = (props) => {
     <div className="shadow">
       <h1 className="bg-primary text-white">Cart</h1>
       <h3>Course enrolled: {cart.length}</h3>
-      <h3>Price: {numFormat(total)}</h3>
-      <h5>Coupon Applied (10%): -{numFormat(coupon)}</h5>
-      <h5>Tax (5%): {numFormat(tax)}</h5>
+      <h3>Price: ${numFormat(total)}</h3>
+      <h5>
+        Coupon Applied (10%):{" "}
+        <span className="text-success"> -${numFormat(coupon)}</span>
+      </h5>
+      <h5>
+        Tax (5%): <span className="text-danger"> ${numFormat(tax)}</span>
+      </h5>
 
       <button type="button" className="btn btn-primary btn-block">
         Checkout{" "}

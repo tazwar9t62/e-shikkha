@@ -15,7 +15,7 @@ const Course = (props) => {
     <div className="">
       <div className="course-container shadow p-3 mx-5 d-flex">
         <img src={img} alt="" />
-        <div className="course-details ml-3 text-left">
+        <div className="course-details ml-5 text-left">
           <h4 className="text-primary">{title}</h4>
           <p>
             <small>Instructor: {instructor}</small>
