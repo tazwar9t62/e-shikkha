@@ -31,7 +31,10 @@ const Course = (props) => {
           </p>
           <br />
           <h6>Price: ${price}</h6>
-          <button onClick={() => props.handleButton(props.courseDetails)}>
+          <button
+            className="btn btn-primary rounded"
+            onClick={() => props.handleButton(props.courseDetails)}
+          >
             Enroll Now
           </button>
         </div>

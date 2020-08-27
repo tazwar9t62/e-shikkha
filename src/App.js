@@ -31,7 +31,7 @@ function App() {
             ></Course>
           ))}
         </div>
-        <div className="cart-container col-md-3 shadow">
+        <div className="cart-container col-md-3">
           <Cart cart={cart}></Cart>
         </div>
       </div>
