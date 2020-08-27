@@ -13,15 +13,21 @@ const Course = (props) => {
   } = props.courseDetails;
   return (
     <div className="">
-      <div className="course-container shadow p-3 m-3 d-flex">
+      <div className="course-container shadow p-3 mx-5 d-flex">
         <img src={img} alt="" />
-        <div className="course-details ml-3">
+        <div className="course-details ml-3 text-left">
           <h4 className="text-primary">{title}</h4>
           <p>
             <small>Instructor: {instructor}</small>
           </p>
           <p>
-            <small>Rating: {rating}</small>
+            <small>
+              Rating:
+              <span className="text-warning font-weight-bold">
+                {" "}
+                {rating}
+              </span>{" "}
+            </small>
           </p>
           <p>
             <small>Duration: {duration} hours</small>
@@ -30,7 +36,7 @@ const Course = (props) => {
             <small>Students Enrolled: {student}</small>
           </p>
           <br />
-          <h6>Price: ${price}</h6>
+          <h6 className="text-success">Price: ${price}</h6>
           <button
             className="btn btn-primary rounded"
             onClick={() => props.handleButton(props.courseDetails)}
