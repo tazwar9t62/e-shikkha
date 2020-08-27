@@ -1,7 +1,6 @@
 import React from "react";
 
 const Course = (props) => {
-  //   console.log(props.courseDetails);
   let {
     title,
     img,
@@ -12,7 +11,7 @@ const Course = (props) => {
     price,
   } = props.courseDetails;
   return (
-    <div className="">
+    <div>
       <div className="course-container shadow p-3 mx-5 d-flex">
         <img src={img} alt="" />
         <div className="course-details ml-5 text-left">

@@ -7,8 +7,9 @@ import Cart from "./Components/Cart/Cart";
 import Header from "./Components/Header/Header";
 
 function App() {
-  let [course, setCourse] = useState(CourseData);
+  let [course, setCourse] = useState(CourseData); //For courses
   let [cart, setCart] = useState([]);
+  //function to handle enroll button
   let handleButton = (pdt) => {
     let newCart = [...cart, pdt];
     setCart(newCart);

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Header = () => {
-    return (
-        <div>
-            <nav className="navbar bg-dark px-5 py-3 navbar-expand-lg text-white">
+  return (
+    <div>
+      <nav className="navbar bg-dark px-5 py-3 navbar-expand-lg text-white">
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +22,7 @@ const Header = () => {
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
               <a className="nav-link" href="/link">
-              My Courses <span className="sr-only">(current)</span>
+                My Courses <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
@@ -52,8 +52,8 @@ const Header = () => {
           </form>
         </div>
       </nav>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Header;
