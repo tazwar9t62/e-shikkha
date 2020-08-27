@@ -13,8 +13,27 @@ const Course = (props) => {
   } = props.courseDetails;
   return (
     <div>
-      <img src={img} alt="" />
-      <h3>{title}</h3>
+      <div className="course-container shadow p-3 m-3 d-flex">
+        <img src={img} alt="" />
+        <div className="course-details ml-3">
+          <h4 className="text-primary">{title}</h4>
+          <p>
+            <small>Instructor: {instructor}</small>
+          </p>
+          <p>
+            <small>Rating: {rating}</small>
+          </p>
+          <p>
+            <small>Duration: {duration} hours</small>
+          </p>
+          <p>
+            <small>Students Enrolled: {student}</small>
+          </p>
+          <br />
+          <h6>Price: ${price}</h6>
+          <button>Enroll Now</button>
+        </div>
+      </div>
     </div>
   );
 };
